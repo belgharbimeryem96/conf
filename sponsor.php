@@ -102,75 +102,13 @@
     <!--header end-->
 
     <!--sidebar start-->
-    <aside>
-      <div id="sidebar" class="nav-collapse ">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu">
-          <li class="active">
-            <a class="" href="#">
-                          <i class="icon_house_alt"></i>
-                          <span>Accueil</span>
-                      </a>
-          </li>
-
-
-          <li class="sub-menu">
-            <a href="blank1.php" class="">
-                          <i class="glyphicon glyphicon-pencil"></i>
-                          <span>Ajouter conférence </span>
-                        
-                      </a>
-        
-          </li>
-
-              <li class="sub-menu">
-            <a href="session.php" class="">
-                          <i class="glyphicon glyphicon-pencil"></i>
-                          <span>Ajouter Session </span>
-                        
-                      </a>
-        
-          </li>
-
-             <li class="sub-menu">
-            <a href="#" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Listes conférences </span>
-                        
-                      </a>
-        
-          </li>
-      
-        <!-- sidebar menu end-->
-      </div>
-    </aside>
+<?php
+include  'aside.php';
+?>
     <!--sidebar end-->
 
     <!--main content start-->
-    <section id="main-content">
-      <section class="wrapper">
-        <!--overview start-->
-     
-
-
-    
-
-
-        <!-- Today status end -->
-
-
-
-
-            <!--Project Activity end-->
-       
-
-        <!-- project team & activity end -->
-
-
-
-     
-      <div class="text-right">
-        <div class="credits">
+ 
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
@@ -220,7 +158,8 @@
     <td colspan="2" align="center"><input type="submit" value="add"></td>
   </tr>
 </table>
-</form> -->
+</form> 
+
 
 <form class="login-form" action="ResConf.php" method='post'>
       <div class="login-wrap">
@@ -244,12 +183,72 @@
       </div>
     </form>
        
+  -->
+
+ <section id="main-content">
+    <section class="wrapper">
+        <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-files-o"></i> Ajouter un Sponsor</h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="icon_document_alt"></i>Forms</li>
+              <li><i class="fa fa-files-o"></i>Ajouter Sponsor</li>
+            </ol>
+          </div>
         </div>
-      </div>
-    </section>
-    <!--main content end-->
-  </section>
-  <!-- container section start -->
+        <!-- Form validations -->
+        <div class="row">
+          <div class="col-lg-12">
+            <section class="panel">
+              <header class="panel-heading">
+               Remplir le formulaire
+              </header>
+              <div class="panel-body">
+                <div class="form">
+                  <form class="form-validate form-horizontal" id="feedback_form" method="get" action="" novalidate="novalidate">
+                    <div class="form-group ">
+                      <label for="cname" class="control-label col-lg-2">Name <span class="required">*</span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required="">
+                      </div>
+                    </div>
+                    <div class="form-group ">
+                      <label for="cemail" class="control-label col-lg-2">Logo <span class="required">*</span></label>
+                      <div class="col-lg-10">
+                       <input type="file" id="exampleInputFile">
+                      </div>
+                    </div>
+                  
+                      <div class="form-group ">
+                      <label for="cemail" class="control-label col-lg-2">Type <span class="required">*</span></label>
+                      <div class="col-lg-10">
+                        <input class="form-control " id="cemail" type="text" name="email" required="">
+                      </div>
+                    </div>
+                  
+                    
+
+                   
+                    <div class="form-group">
+                      <div class="col-lg-offset-2 col-lg-10">
+                        <button class="btn btn-primary" type="submit">Save</button>
+                        <button class="btn btn-default" type="button">Cancel</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+
+              </div>
+            </section>
+          </div>
+        </div>
+        <!-- page end-->
+      </section>
+        <!--overview start-->
+
+ 
+     
 
   <!-- javascripts -->
   <script src="js/jquery.js"></script>

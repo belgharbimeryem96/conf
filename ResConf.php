@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<?php
+error_reporting(0);
+?>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +10,7 @@
   <meta name="author" content="GeeksLabs">
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
+
 
   <title>Gestion de conférence</title>
 
@@ -105,74 +108,62 @@
     <!--header end-->
 
     <!--sidebar start-->
-    <aside>
-      <div id="sidebar" class="nav-collapse ">
-        <!-- sidebar menu start-->
-        <ul class="sidebar-menu">
-          <li class="active">
-            <a class="" href="#.php">
-                          <i class="icon_house_alt"></i>
-                          <span>Accueil</span>
-                      </a>
-          </li>
-
-
-          <li class="sub-menu">
-            <a href="blank1.php" class="">
-                          <i class="glyphicon glyphicon-pencil"></i>
-                          <span>Ajouter conférence </span>
-                        
-                      </a>
-        
-          </li>
-
-             <li class="sub-menu">
-            <a href="#" class="">
-                          <i class="icon_document_alt"></i>
-                          <span>Listes conférences </span>
-                        
-                      </a>
-        
-          </li>
-      
-        <!-- sidebar menu end-->
-      </div>
-    </aside>
+ <?php
+include  'aside.php';
+?>
     <!--sidebar end-->
 
-    <!--main content start-->
-    <section id="main-content">
+ <section id="main-content">
       <section class="wrapper">
-        <!--overview start-->
-     
+         <div class="row">
+          <div class="col-lg-12">
+            <h3 class="page-header"><i class="fa fa-table"></i> Toutes les Conférences</h3>
+            <ol class="breadcrumb">
+              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
+              <li><i class="fa fa-table"></i>Table</li>
+              <li><i class="fa fa-th-list"></i>les Conférences</li>
+            </ol>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-12">
+           <section class="panel">
+             
 
+              <table class="table table-striped table-advance table-hover">
+                <tbody>
+                  <tr>
+                    <th><i class="icon_profile"></i> Name</th>
+                    <th><i class="icon_calendar"></i> Date</th>
+                    <th><i class="icon_mail_alt"></i> Logo</th>
+                    <th><i class="icon_pin_alt"></i> Description</th>
+                    <th><i class="icon_cogs"></i> Action</th>
+                  </tr>
+                  <tr>
+                    <td>Monet</td>
+                    <td>2004-07-06</td>
+                    <td>info</td>
+                    <td>Rosser</td>
+                
+                    <td>
+                      <div class="btn-group">
+                        <a class="btn btn-primary" href="#"><i class="icon_plus_alt2"></i></a>
+                        <a class="btn btn-success" href="#"><i class="icon_check_alt2"></i></a>
+                        <a class="btn btn-danger" href="#"><i class="icon_close_alt2"></i></a>
+                      </div>
+                    </td>
+                  </tr>
+                 
+                </tbody>
+              </table>
+            </section>
+          </div>
+        </div>
+        <!-- page end-->
+      </section>
+    </section>
 
-    
-
-
-        <!-- Today status end -->
-
-
-
-
-            <!--Project Activity end-->
-       
-
-        <!-- project team & activity end -->
-
-
-
-     
-      <div class="text-right">
-        <div class="credits">
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
-          -->
-
-
+       <!-- page end
 <?php
 
 $name = $_POST['name'];
@@ -216,9 +207,9 @@ $email = $_POST['email'];
  </div>
       </div>
     </section>
-    <!--main content end-->
-  </section>
-  <!-- container section start -->
+   main content end
+ 
+  container section start -->
 
   <!-- javascripts -->
   <script src="js/jquery.js"></script>
