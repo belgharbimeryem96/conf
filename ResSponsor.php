@@ -40,7 +40,10 @@
     Author: BootstrapMade
     Author URL: https://bootstrapmade.com
   ======================================================= -->
-   <link href="css/form.css" rel="stylesheet">
+  
+  
+    <link href="css/form.css" rel="stylesheet">
+  
 </head>
 
 <body>
@@ -102,13 +105,66 @@
     <!--header end-->
 
     <!--sidebar start-->
-<?php
-include  'aside.php';
-?>
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="active">
+            <a class="" href="#.php">
+                          <i class="icon_house_alt"></i>
+                          <span>Accueil</span>
+                      </a>
+          </li>
+
+
+          <li class="sub-menu">
+            <a href="blank1.php" class="">
+                          <i class="glyphicon glyphicon-pencil"></i>
+                          <span>Ajouter conférence </span>
+                        
+                      </a>
+        
+          </li>
+
+             <li class="sub-menu">
+            <a href="#" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Listes conférences </span>
+                        
+                      </a>
+        
+          </li>
+      
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
     <!--sidebar end-->
 
     <!--main content start-->
- 
+    <section id="main-content">
+      <section class="wrapper">
+        <!--overview start-->
+     
+
+
+    
+
+
+        <!-- Today status end -->
+
+
+
+
+            <!--Project Activity end-->
+       
+
+        <!-- project team & activity end -->
+
+
+
+     
+      <div class="text-right">
+        <div class="credits">
           <!--
             All the links in the footer should remain intact.
             You can delete the links only if you purchased the pro version.
@@ -116,139 +172,42 @@ include  'aside.php';
             Purchase the pro version form: https://bootstrapmade.com/buy/?theme=NiceAdmin
           -->
 
-<!--
-          <form action="AddConference.php" method='post'>
-<table align="center" border="0">
-  <tr>
-    <td>id conference :</td>
-    <td><input type="text" name="name" maxlength="400"></td>
-  </tr>
-    <tr>
-  <td> name of session </td>  
-    <td><input type="text" name="nameconference" maxlength="250"></td>
-  </tr>
-  <tr>
-  <td> Description : </td>  
-    <td> <textarea name="desc" maxlength="250" ></textarea></td>
-  </tr>
-  <tr>
-    <td>Subject</td>
-    <td><input type="text" name="sponsor" maxlength="10"></td>
+<?php
+
+
+$name = $_POST['name'];
+$logo = $_POST['logo'];
+$fichier = $_POST['fichier'];
+$type = $_POST['type'];
+
+?>
+<table border="1" cellpadding="15" align="center">
+   <tr bgcolor="blue">
+	   <th>Name sponsor</th>
+       <th>Logo</th>
+       <th>Picture</th>
+       <th>Type</th>
     
-  </tr>
-  <tr>
-    <td>Location :</td>
-    <td><input type="text" name="location" maxlength="250"></td>
-  </tr>
+	   
+	   
+   </tr>
+
+   <tr>
+	   <td><?php echo "$nameconference "?></td>
+       <td><?php echo "$logo" ?></td>
+       <td><?php echo " $desc " ?></td>
+       <td><?php echo "$date "?></td>   
+       
+   </tr>
   
-  
-  <tr>
-    <td>Date start :</td>
-    <td><input type="Date" name="dates" maxlength="250"></td>
-  </tr>
-  
-    <tr>
-    <td>Date end :</td>
-    <td><input type="Date" name="datee" maxlength="250"></td>
-  </tr>
-  
-  
-  
-  <tr>
-    <td colspan="2" align="center"><input type="submit" value="add"></td>
-  </tr>
 </table>
-</form> 
 
-
-<form class="login-form" action="ResConf.php" method='post'>
-      <div class="login-wrap">
-        
-        <div class="input-group">
-          
-          <input type="text" class="form-control" name="name" placeholder="Name sponsor" autofocus>
-          <input type="text" class="form-control" name="logo" placeholder="Logo" autofocus>
-           
-   
-  
-  
-         <input type="text" class="form-control" name="type" placeholder="Type" autofocus>
-          
-          
-        </div>
-     
-       
-        <button class="btn btn-primary btn-lg btn-block" type="submit">Ajouter Sponsor</button>
-        
+ </div>
       </div>
-    </form>
-       
-  -->
-
- <section id="main-content">
-    <section class="wrapper">
-        <div class="row">
-          <div class="col-lg-12">
-            <h3 class="page-header"><i class="fa fa-files-o"></i> Ajouter un Sponsor</h3>
-            <ol class="breadcrumb">
-              <li><i class="fa fa-home"></i><a href="index.html">Home</a></li>
-              <li><i class="icon_document_alt"></i>Forms</li>
-              <li><i class="fa fa-files-o"></i>Ajouter Sponsor</li>
-            </ol>
-          </div>
-        </div>
-        <!-- Form validations -->
-        <div class="row">
-          <div class="col-lg-12">
-            <section class="panel">
-              <header class="panel-heading">
-               Remplir le formulaire
-              </header>
-              <div class="panel-body">
-                <div class="form">
-                  <form class="form-validate form-horizontal" id="feedback_form" method="get" action="" novalidate="novalidate">
-                    <div class="form-group ">
-                      <label for="cname" class="control-label col-lg-2">Name <span class="required">*</span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control" id="cname" name="fullname" minlength="5" type="text" required="">
-                      </div>
-                    </div>
-                    <div class="form-group ">
-                      <label for="cemail" class="control-label col-lg-2">Logo <span class="required">*</span></label>
-                      <div class="col-lg-10">
-                       <input type="file" id="exampleInputFile">
-                      </div>
-                    </div>
-                  
-                      <div class="form-group ">
-                      <label for="cemail" class="control-label col-lg-2">Type <span class="required">*</span></label>
-                      <div class="col-lg-10">
-                        <input class="form-control " id="cemail" type="text" name="email" required="">
-                      </div>
-                    </div>
-                  
-                    
-
-                   
-                    <div class="form-group">
-                      <div class="col-lg-offset-2 col-lg-10">
-                        <button class="btn btn-primary" type="submit">Save</button>
-                        <button class="btn btn-default" type="button">Cancel</button>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-
-              </div>
-            </section>
-          </div>
-        </div>
-        <!-- page end-->
-      </section>
-        <!--overview start-->
-
- 
-     
+    </section>
+    <!--main content end-->
+  </section>
+  <!-- container section start -->
 
   <!-- javascripts -->
   <script src="js/jquery.js"></script>
@@ -300,7 +259,6 @@ include  'aside.php';
           }
         })
       });
-
       //carousel
       $(document).ready(function() {
         $("#owl-slider").owlCarousel({
@@ -308,16 +266,12 @@ include  'aside.php';
           slideSpeed: 300,
           paginationSpeed: 400,
           singleItem: true
-
         });
       });
-
       //custom select box
-
       $(function() {
         $('select.styled').customSelect();
       });
-
       /* ---------- Map ---------- */
       $(function() {
         $('#map').vectorMap({
@@ -336,6 +290,8 @@ include  'aside.php';
         });
       });
     </script>
+    
+    
 
 </body>
 

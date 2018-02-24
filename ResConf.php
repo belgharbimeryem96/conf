@@ -11,8 +11,12 @@ error_reporting(0);
   <meta name="keyword" content="Creative, Dashboard, Admin, Template, Theme, Bootstrap, Responsive, Retina, Minimal">
   <link rel="shortcut icon" href="img/favicon.png">
 
+<<<<<<< HEAD
 
   <title>Gestion de conf�rence</title>
+=======
+  <title>Gestion de conférence</title>
+>>>>>>> 204b5f346d39956a6569f182518627613a3fbbc5
 
   <!-- Bootstrap CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -60,7 +64,7 @@ error_reporting(0);
       </div>
 
       <!--logo start-->
-      <a href="#" class="logo">Gestion<span class="lite">Conf�rence</span></a>
+      <a href="#" class="logo">Gestion<span class="lite">Conférence</span></a>
       <!--logo end-->
 
       <div class="nav search-row" id="top_menu">
@@ -108,9 +112,45 @@ error_reporting(0);
     <!--header end-->
 
     <!--sidebar start-->
+<<<<<<< HEAD
  <?php
 include  'aside.php';
 ?>
+=======
+    <aside>
+      <div id="sidebar" class="nav-collapse ">
+        <!-- sidebar menu start-->
+        <ul class="sidebar-menu">
+          <li class="active">
+            <a class="" href="#.php">
+                          <i class="icon_house_alt"></i>
+                          <span>Accueil</span>
+                      </a>
+          </li>
+
+
+          <li class="sub-menu">
+            <a href="blank1.php" class="">
+                          <i class="glyphicon glyphicon-pencil"></i>
+                          <span>Ajouter conférence </span>
+                        
+                      </a>
+        
+          </li>
+
+             <li class="sub-menu">
+            <a href="#" class="">
+                          <i class="icon_document_alt"></i>
+                          <span>Listes conférences </span>
+                        
+                      </a>
+        
+          </li>
+      
+        <!-- sidebar menu end-->
+      </div>
+    </aside>
+>>>>>>> 204b5f346d39956a6569f182518627613a3fbbc5
     <!--sidebar end-->
 
  <section id="main-content">
@@ -166,40 +206,30 @@ include  'aside.php';
        <!-- page end
 <?php
 
-$name = $_POST['name'];
-$nameconference = $_POST['nameconference'];
-$sponsor = $_POST['sponsor'];
-$fichier = $_POST['fichier'];
-$location = $_POST['location'];
-$dates = $_POST['dates'];
-$datee = $_POST['datee'];
-$email = $_POST['email'];
+
+$nameconference = $_POST['name'];
+$logo = $_POST['logo'];
+$desc = $_POST['desc'];
+$date = $_POST['date'];
+
 ?>
 <table border="1" cellpadding="15" align="center">
    <tr bgcolor="blue">
-	   <th>Logo</th>
-       <th>Short Name</th>
-       <th>Name of Conference</th>
-       <th>Sponsor</th>
-       <th>Location</th>
-       <th> Date start</th>
-       <th> Date end</th>
-       <th> Email </th>
-	   <th> Validation </th>
+	   <th>Conference Name</th>
+       <th>Conference logo</th>
+       <th>Description</th>
+       <th>date</th>
+    
 	   
 	   
    </tr>
 
    <tr>
-	   <td><?php echo "$fichier "?></td>
-       <td><?php echo "$name" ?></td>
-       <td><?php echo " $nameconference " ?></td>
-       <td><?php echo "$sponsor "?></td>   
-       <td><?php echo " $location "?></td>
-       <td><?php echo "$dates" ?></td>
-       <td><?php echo "$datee" ?></td>
-       <td><?php echo "$email" ?></td>
-	   <td><?php echo "En cours .." ?></td>
+	   <td><?php echo "$nameconference "?></td>
+       <td><?php echo "$logo" ?></td>
+       <td><?php echo " $desc " ?></td>
+       <td><?php echo "$date "?></td>   
+       
    </tr>
   
 </table>
@@ -261,7 +291,6 @@ $email = $_POST['email'];
           }
         })
       });
-
       //carousel
       $(document).ready(function() {
         $("#owl-slider").owlCarousel({
@@ -269,16 +298,12 @@ $email = $_POST['email'];
           slideSpeed: 300,
           paginationSpeed: 400,
           singleItem: true
-
         });
       });
-
       //custom select box
-
       $(function() {
         $('select.styled').customSelect();
       });
-
       /* ---------- Map ---------- */
       $(function() {
         $('#map').vectorMap({
